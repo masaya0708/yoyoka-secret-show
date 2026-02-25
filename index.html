@@ -109,7 +109,8 @@
                     YOYOKA
                 </div>
                 <div>
-                    <a href="#ticket"
+                    <a href="https://sub.en-moto.com/event/MZmNtZiiXDZK/register" target="_blank"
+                        rel="noopener noreferrer"
                         class="text-xs font-medium tracking-widest border border-gray-500 text-gray-300 px-6 py-2 hover:border-white hover:text-white transition-colors duration-300">
                         TICKET
                     </a>
@@ -179,11 +180,10 @@
                 <span class="text-gray-600 mr-4">01.</span>THE STORY
             </h2>
 
-            <div class="flex flex-col md:flex-row gap-16 items-start">
-                <!-- プロフィール写真エリア（独立して配置） -->
-                <div class="w-full md:w-5/12 reveal">
-                    <div class="sticky top-32 group">
-                        <!-- 公式HPへのリンクを付与 -->
+            <div class="max-w-4xl mx-auto">
+                <!-- プロフィール写真エリア（中央・単独配置にレイアウト変更） -->
+                <div class="w-full max-w-md mx-auto reveal mb-24 md:mb-32">
+                    <div class="group">
                         <a href="https://yoyoka.jp/" target="_blank" rel="noopener noreferrer"
                             class="block relative overflow-hidden rounded-lg shadow-2xl transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(255,255,255,0.1)]">
                             <img src="image_yoyoka_01.jpeg" alt="YOYOKA Profile"
@@ -192,24 +192,26 @@
                             <!-- ホバー時に現れるオーバーレイとテキスト -->
                             <div
                                 class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center backdrop-blur-sm">
-                                <i data-lucide="external-link" class="w-8 h-8 text-white mb-2"></i>
-                                <span class="text-white font-bold tracking-widest border-b border-white pb-1">OFFICIAL
+                                <i data-lucide="external-link" class="w-10 h-10 text-white mb-3"></i>
+                                <span
+                                    class="text-white text-lg md:text-xl font-bold tracking-widest border-b border-white pb-1">OFFICIAL
                                     WEBSITE</span>
                             </div>
                         </a>
-                        <div class="mt-8 border-l-2 border-gray-800 pl-6">
-                            <h3 class="text-3xl font-bold mb-1 en-font tracking-wider text-white">YOYOKA</h3>
-                            <p class="text-gray-500 text-sm tracking-widest en-font">DRUMMER</p>
+                        <div class="mt-10 text-center">
+                            <h3 class="text-4xl font-bold mb-2 en-font tracking-wider text-white">YOYOKA</h3>
+                            <p class="text-gray-500 text-base tracking-widest en-font mb-6">DRUMMER</p>
+                            <div class="w-12 h-1 bg-white mx-auto"></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- テキストエリア (PC表示で文字を大きく・明るく調整) -->
+                <!-- テキストエリア (PC表示で広々と見せ、行間やブロック間の余白も大きく調整) -->
                 <div
-                    class="w-full md:w-7/12 text-gray-200 font-normal leading-loose md:leading-[2.5] space-y-12 md:text-lg">
-                    <div class="reveal">
+                    class="w-full text-gray-200 font-normal leading-loose md:leading-[2.8] space-y-20 md:space-y-32 md:text-xl">
+                    <div class="reveal text-center">
                         <p
-                            class="text-2xl md:text-3xl font-bold text-white pb-6 border-b border-gray-800 leading-relaxed md:leading-[1.6]">
+                            class="text-2xl md:text-4xl font-bold text-white pb-10 border-b border-gray-800 leading-relaxed md:leading-[1.8] inline-block">
                             8歳の「天才少女」から、<br>世界で戦う16歳のプロフェッショナルへ。
                         </p>
                     </div>
@@ -223,19 +225,28 @@
                     </div>
 
                     <!-- YouTube Video -->
-                    <div class="reveal rounded-lg overflow-hidden border border-gray-800 my-12 shadow-2xl">
+                    <div class="reveal rounded-xl overflow-hidden border border-gray-800 shadow-2xl">
                         <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/91pz1E8pAOY"
                             title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen></iframe>
                     </div>
 
-                    <div class="reveal bg-black p-8 md:p-10 border-l-4 border-white my-8 rounded-r-lg shadow-xl">
-                        <p class="text-base md:text-lg text-gray-100 font-medium leading-relaxed md:leading-loose">
+                    <div class="reveal bg-black p-10 md:p-14 border-l-4 border-white rounded-r-2xl shadow-xl relative">
+                        <p class="text-lg md:text-xl text-gray-100 font-medium leading-relaxed md:leading-[2.2]">
                             華々しい活躍の一方で、そこには大きな壁があります。<br>
+                            <br>
                             クラシック音楽などとは異なり、ポップス・ロック分野において10代のアーティストが海外挑戦するための公的な支援制度や奨学金は、日本にはほぼ存在しません。<br>
+                            <br>
                             現在の彼女の活動資金は、スポンサーからのご支援と、家族の自己負担という「孤軍奮闘」によって切り拓かれているのが現実です。
                         </p>
+                    </div>
+
+                    <!-- 追加画像 (ICC) -->
+                    <div class="reveal rounded-xl overflow-hidden shadow-2xl">
+                        <img src="image_yoyoka_ICC.jpg" alt="ICC FUKUOKA 2025"
+                            class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-1000"
+                            onerror="this.src='image_yoyoka_ICC.png'; this.onerror='image_yoyoka_ICC.jpeg';">
                     </div>
 
                     <div class="reveal">
@@ -255,16 +266,16 @@
                 <span class="text-gray-600 mr-4">02.</span>主催者メッセージ
             </h2>
 
-            <div class="text-gray-200 font-normal leading-loose md:leading-[2.5] space-y-12 md:text-lg">
+            <div class="text-gray-200 font-normal leading-loose md:leading-[2.8] space-y-20 md:space-y-32 md:text-xl">
                 <div class="reveal">
                     <p>
                         今回、一時帰国するYOYOKAちゃんのシークレットショーを、私が主催させていただくことになりました。
                     </p>
-                    <p class="mt-8">
+                    <p class="mt-12 md:mt-16">
                         理由はとてもシンプルです。<br>
                         <span
-                            class="text-white font-bold text-xl md:text-2xl border-b-2 border-gray-600 pb-1 inline-block mt-2">「今の彼女のドラムを、どうしても生で観てほしい」</span><br
-                            class="hidden md:block">と思ったから。
+                            class="text-white font-bold text-2xl md:text-4xl border-b-2 border-gray-600 pb-2 inline-block mt-6 leading-normal md:leading-normal">「今の彼女のドラムを、<br
+                                class="md:hidden">どうしても生で観てほしい」</span><br>と思ったから。
                     </p>
                 </div>
 
@@ -292,7 +303,8 @@
                 <div class="reveal">
                     <p>
                         私はその姿に、ただの感動ではなく、<br>
-                        <span class="text-white font-medium">「これは社会全体の問題でもあるのではないか」</span>と感じました。
+                        <span
+                            class="text-white font-bold text-xl md:text-3xl mt-4 block">「これは社会全体の問題でもあるのではないか」</span>と感じました。
                     </p>
                 </div>
 
@@ -346,9 +358,10 @@
                     </p>
                 </div>
 
-                <div class="reveal pt-16 border-t border-gray-900 text-right">
-                    <p class="text-[10px] text-gray-500 mb-2 tracking-widest en-font">YOYOKA SECRET SHOW ORGANIZER</p>
-                    <p class="font-medium text-white tracking-widest text-lg">和田優喜子</p>
+                <div class="reveal pt-24 border-t border-gray-900 text-right">
+                    <p class="text-xs md:text-sm text-gray-500 mb-2 tracking-widest en-font">YOYOKA SECRET SHOW
+                        ORGANIZER</p>
+                    <p class="font-bold text-white tracking-widest text-xl md:text-2xl">和田優喜子</p>
                 </div>
             </div>
         </div>
@@ -526,10 +539,10 @@
             </div>
 
             <div class="reveal">
-                <button
-                    class="btn-premium border border-white text-white font-bold tracking-widest py-5 px-20 transition-colors duration-500 text-sm">
+                <a href="https://sub.en-moto.com/event/MZmNtZiiXDZK/register" target="_blank" rel="noopener noreferrer"
+                    class="btn-premium inline-block border border-white text-white font-bold tracking-widest py-5 px-20 transition-colors duration-500 text-sm">
                     申し込む
-                </button>
+                </a>
             </div>
         </div>
     </section>

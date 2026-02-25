@@ -129,14 +129,15 @@
                     緊急帰国
                 </div>
                 <h1
-                    class="reveal reveal-delay-1 font-extrabold text-5xl md:text-8xl leading-tight mb-8 text-white drop-shadow-2xl">
-                    SECRET SHOW
+                    class="reveal reveal-delay-1 font-extrabold text-5xl md:text-7xl lg:text-8xl leading-none mb-8 text-white drop-shadow-2xl tracking-widest block whitespace-nowrap">
+                    SECRET EVENT
                 </h1>
                 <p
                     class="reveal reveal-delay-2 text-lg md:text-2xl text-gray-200 font-medium leading-[2.2] md:leading-loose mb-12 max-w-3xl mx-auto drop-shadow-lg">
-                    ロサンゼルスを拠点に世界へ挑戦する<br class="md:hidden">16歳の天才ドラマー、YOYOKA。<br class="hidden md:block">
-                    一時帰国に合わせ、<br class="md:hidden">シークレットショーを開催します。<br class="hidden md:block">
-                    彼女の魂の音を、<br class="md:hidden">ぜひ身体で体感してください。
+                    ロサンゼルスを拠点に世界へ挑戦する16歳の天才ドラマー<br>
+                    YOYOKA<br>
+                    一時帰国に合わせ、シークレットイベントを開催します。<br>
+                    世界のYOYOKAをぜひ体感してください。
                 </p>
             </div>
         </div>
@@ -265,12 +266,15 @@
 
     <!-- Message Section -->
     <section id="story" class="py-32 bg-black border-t border-gray-900">
-        <div class="container mx-auto px-6 max-w-3xl">
+        <!-- 幅を絞るためにmax-w-2xlクラスを使用し、中央寄せを調整 -->
+        <div class="container mx-auto px-8 md:px-6 max-w-2xl">
             <h2 class="reveal text-2xl md:text-3xl font-bold mb-20 tracking-widest text-center en-font text-white">
                 <span class="text-gray-600 mr-4">02.</span>主催者メッセージ
             </h2>
 
-            <div class="text-gray-200 font-normal leading-loose md:leading-[2.8] space-y-20 md:space-y-32 md:text-xl">
+            <!-- 幅広になりすぎないようここでレイアウトを締める -->
+            <div
+                class="text-gray-200 font-normal leading-loose md:leading-[2.8] space-y-20 md:space-y-32 text-sm md:text-lg">
                 <div class="reveal">
                     <p>
                         今回、このシークレットイベントを主催させていただきます、和田優喜子です。私は音楽を愛し、YOYOKAファミリーの挑戦を心から応援している一人のファンです。
@@ -357,8 +361,10 @@
                     </p>
                 </div>
 
-                <div class="reveal text-center my-16">
-                    <p class="text-xl md:text-3xl text-white font-bold border-b-2 border-white inline-block pb-3">
+                <div class="reveal text-center my-16 overflow-hidden">
+                    <!-- 画面幅に合わせて拡縮し、絶対に折り返さない（whitespace-nowrap）設定 -->
+                    <p
+                        class="text-base sm:text-lg md:text-2xl text-white font-bold border-b-2 border-white inline-block pb-3 whitespace-nowrap px-2">
                         あなたの一歩が、この挑戦を続ける大きな力になります。
                     </p>
                 </div>

@@ -8,8 +8,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google FontsのURLを修正 -->
     <link
-        href="https://www.google.com/search?q=https://fonts.googleapis.com/css2%3Ffamily%3DMontserrat:wght%40300%3B400%3B600%3B800%26family%3DShippori%2BMincho:wght%40400%3B500%3B600%3B700%26display%3Dswap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Shippori+Mincho:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
@@ -99,7 +100,8 @@
     </style>
 </head>
 
-<body class="selection:bg-white selection:text-black overflow-x-hidden"><!-- Navigation -->
+<body class="selection:bg-white selection:text-black overflow-x-hidden">
+    <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-gray-900 transition-all duration-300"
         id="navbar">
         <div class="max-w-6xl mx-auto px-6">
@@ -110,7 +112,9 @@
                 </div>
             </div>
         </div>
-    </nav><!-- Hero Section -->
+    </nav>
+
+    <!-- Hero Section -->
     <div class="relative pt-20 pb-32 flex content-center items-center justify-center min-h-screen overflow-hidden">
         <div class="absolute inset-0 w-full h-full">
             <div class="absolute inset-0 bg-center bg-cover bg-no-repeat hero-bg-zoom"
@@ -128,12 +132,14 @@
                     class="reveal inline-block border-2 border-red-500 text-white px-8 py-3 mb-10 tracking-[0.3em] text-sm md:text-base font-black bg-red-600/30 backdrop-blur-sm shadow-[0_0_20px_rgba(239,68,68,0.5)] transform -rotate-1 hover:rotate-0 hover:scale-105 transition-all duration-300">
                     緊急帰国
                 </div>
+                <!-- スマホで見切れないようにサイズを縮小し、スマホ時のみ折り返しを許可 (whitespace-normal md:whitespace-nowrap) -->
                 <h1
-                    class="reveal reveal-delay-1 font-extrabold text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl leading-none mb-8 text-white drop-shadow-2xl tracking-widest block whitespace-nowrap">
+                    class="reveal reveal-delay-1 font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight mb-8 text-white drop-shadow-2xl tracking-widest block whitespace-normal md:whitespace-nowrap">
                     YOYOKA SECRET EVENT
                 </h1>
+                <!-- スマホ時に80%縮小 (text-sm) になるよう修正 -->
                 <p
-                    class="reveal reveal-delay-2 text-lg md:text-2xl text-gray-200 font-medium leading-[2.2] md:leading-loose mb-12 max-w-3xl mx-auto drop-shadow-lg">
+                    class="reveal reveal-delay-2 text-sm sm:text-base md:text-xl lg:text-2xl text-gray-200 font-medium leading-[2.2] md:leading-loose mb-12 max-w-3xl mx-auto drop-shadow-lg">
                     ロサンゼルスを拠点に世界へ挑戦する16歳の天才ドラマー<br>
                     YOYOKA<br>
                     一時帰国に合わせ、シークレットイベントを開催します。<br>
@@ -167,12 +173,13 @@
 
     <!-- The Story of YOYOKA -->
     <section class="py-32 bg-[#050505] border-t border-gray-900">
-        <div class="container mx-auto px-6 max-w-5xl">
+        <!-- 他のセクションと幅を統一 (max-w-3xl) -->
+        <div class="container mx-auto px-6 max-w-3xl">
             <h2 class="reveal text-2xl md:text-3xl font-bold mb-20 tracking-widest text-center en-font text-white">
                 <span class="text-gray-600 mr-4">01.</span>THE STORY
             </h2>
 
-            <div class="max-w-4xl mx-auto">
+            <div class="w-full mx-auto">
                 <!-- プロフィール写真エリア -->
                 <div class="w-full max-w-md mx-auto reveal mb-24 md:mb-32">
                     <div class="group">
@@ -198,12 +205,12 @@
                     </div>
                 </div>
 
-                <!-- テキストエリア -->
+                <!-- 本文エリア：フォントサイズを他と統一 (text-base md:text-lg) -->
                 <div
-                    class="w-full text-gray-200 font-normal leading-loose md:leading-[2.8] space-y-20 md:space-y-32 md:text-xl">
+                    class="w-full text-gray-200 font-normal leading-loose md:leading-[2.8] space-y-20 md:space-y-32 text-base md:text-lg">
                     <div class="reveal text-center">
                         <p
-                            class="text-2xl md:text-4xl font-bold text-white pb-10 border-b border-gray-800 leading-relaxed md:leading-[1.8] inline-block">
+                            class="text-xl md:text-3xl font-bold text-white pb-10 border-b border-gray-800 leading-relaxed md:leading-[1.8] inline-block">
                             8歳の「天才少女」から、<br>世界で戦う16歳のプロフェッショナルへ。
                         </p>
                     </div>
@@ -245,7 +252,7 @@
 
                     <!-- 追加画像 (ICC) -->
                     <div class="reveal rounded-xl overflow-hidden shadow-2xl">
-                        <img src="./image_yoyoka_ICC.jpg" alt="ICC FUKUOKA 2025"
+                        <img src="image_yoyoka_ICC.jpg" alt="ICC FUKUOKA 2025"
                             class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-1000"
                             onerror="this.onerror=null; this.src='image_yoyoka_ICC.jpeg';">
                         <p
@@ -266,15 +273,15 @@
 
     <!-- Message Section -->
     <section id="story" class="py-32 bg-black border-t border-gray-900">
-        <!-- 幅を絞るためにmax-w-2xlクラスを使用し、中央寄せを調整 -->
-        <div class="container mx-auto px-8 md:px-6 max-w-2xl">
+        <!-- 他のセクションと幅を統一 (max-w-3xl) -->
+        <div class="container mx-auto px-6 max-w-3xl">
             <h2 class="reveal text-2xl md:text-3xl font-bold mb-20 tracking-widest text-center en-font text-white">
                 <span class="text-gray-600 mr-4">02.</span>主催者メッセージ
             </h2>
 
-            <!-- 幅広になりすぎないようここでレイアウトを締める -->
+            <!-- 本文エリア：フォントサイズを他と統一 (text-base md:text-lg) -->
             <div
-                class="text-gray-200 font-normal leading-loose md:leading-[2.8] space-y-20 md:space-y-32 text-sm md:text-lg">
+                class="text-gray-200 font-normal leading-loose md:leading-[2.8] space-y-20 md:space-y-32 text-base md:text-lg">
                 <div class="reveal">
                     <p>
                         今回、このシークレットイベントを主催させていただきます、和田優喜子です。私は音楽を愛し、YOYOKAファミリーの挑戦を心から応援している一人のファンです。
@@ -283,7 +290,7 @@
 
                 <!-- 追加画像 (Family) -->
                 <div class="reveal rounded-xl overflow-hidden shadow-2xl mt-16 mb-24">
-                    <img src="./image_yoyoka_family.jpg" alt="YOYOKA and Family"
+                    <img src="image_yoyoka_family.jpg" alt="YOYOKA and Family"
                         class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-1000"
                         onerror="this.onerror=null; this.src='image_yoyoka_family.jpeg';">
                 </div>
@@ -386,7 +393,7 @@
 
     <!-- Info & Schedule -->
     <section class="py-32 bg-[#050505] border-t border-gray-900">
-        <div class="container mx-auto px-6 max-w-5xl">
+        <div class="container mx-auto px-6 max-w-4xl">
             <h2 class="reveal text-2xl md:text-3xl font-bold mb-20 tracking-widest text-center en-font text-white">
                 <span class="text-gray-600 mr-4">03.</span>INFORMATION
             </h2>
@@ -451,7 +458,7 @@
             <div class="reveal rounded-xl overflow-hidden shadow-2xl group">
                 <a href="https://yoyoka.jp/" target="_blank" rel="noopener noreferrer"
                     class="block relative w-full h-full">
-                    <img src="./image_yoyoka_02.jpg" alt="YOYOKA Performance"
+                    <img src="image_yoyoka_02.jpg" alt="YOYOKA Performance"
                         class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-1000">
                     <div
                         class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center backdrop-blur-sm">
@@ -465,7 +472,7 @@
 
             <!-- 追加画像 (Solo Live) -->
             <div class="reveal rounded-xl overflow-hidden shadow-2xl">
-                <img src="./image_yoyoka_solo_live.jpg" alt="YOYOKA Solo Concert 2025"
+                <img src="image_yoyoka_solo_live.jpg" alt="YOYOKA Solo Concert 2025"
                     class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-1000"
                     onerror="this.onerror=null; this.src='image_yoyoka_solo_live.jpeg';">
                 <p class="text-[10px] md:text-xs text-center text-gray-500 mt-4 tracking-widest bg-[#0a0a0a] pb-2 pt-2">
@@ -538,6 +545,7 @@
             DONATION
         </div>
 
+        <!-- 他のセクションと幅を統一 (max-w-3xl) -->
         <div class="container mx-auto px-6 max-w-3xl relative z-10">
             <h2 class="reveal text-2xl md:text-3xl font-bold mb-20 tracking-widest en-font text-white">
                 <span class="text-gray-600 mr-4">05.</span>DONATION & TICKET
@@ -547,6 +555,7 @@
                 <h4
                     class="text-base md:text-lg font-bold tracking-widest mb-8 border-b border-gray-700 pb-4 text-white">
                     ドネーション（支援金）について</h4>
+                <!-- 本文エリア：フォントサイズを他と統一 (text-base md:text-lg) -->
                 <div class="text-base md:text-lg text-gray-300 font-normal leading-loose md:leading-[2.2] space-y-6">
                     <p>
                         今回のイベントは、皆様からのドネーション（ご支援）によって成り立つ特別なシークレットショーです。

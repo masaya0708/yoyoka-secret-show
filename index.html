@@ -1,472 +1,569 @@
-<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>YOYOKA SECRET SHOW 2026</title><script src="https://www.google.com/search?q=https://cdn.tailwindcss.com"></script><link rel="preconnect" href="https://www.google.com/search?q=https://fonts.googleapis.com"><link rel="preconnect" href="https://www.google.com/search?q=https://fonts.gstatic.com" crossorigin><link href="https://www.google.com/search?q=https://fonts.googleapis.com/css2%3Ffamily%3DInter:wght%40300%3B400%3B600%3B800%26family%3DNoto%2BSans%2BJP:wght%40300%3B400%3B500%3B700%26display%3Dswap" rel="stylesheet"><script src="https://www.google.com/search?q=https://unpkg.com/lucide%40latest"></script><style>body {font-family: 'Noto Sans JP', sans-serif;background-color: #000000;color: #e5e5e5; /* 落ち着いたオフホワイト */letter-spacing: 0.05em;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}h1, h2, h3, .en-font {font-family: 'Inter', sans-serif;letter-spacing: 0.15em;}    /* ヒーロー画像のゆっくりズーム (Ken Burns Effect) */
-    .hero-bg-zoom {
-        animation: zoomEffect 20s infinite alternate linear;
-    }
-    @keyframes zoomEffect {
-        0% { transform: scale(1); }
-        100% { transform: scale(1.05); }
-    }
+<!DOCTYPE html>
+<html lang="ja">
 
-    /* スクロール連動フェードアップ (Reveal) */
-    .reveal {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
-    }
-    .reveal.active {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    /* 少し遅れて出てくる要素用 */
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOYOKA SECRET SHOW 2026</title>
+    <script src="https://www.google.com/search?q=https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://www.google.com/search?q=https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://www.google.com/search?q=https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://www.google.com/search?q=https://fonts.googleapis.com/css2%3Ffamily%3DInter:wght%40300%3B400%3B600%3B800%26family%3DNoto%2BSans%2BJP:wght%40300%3B400%3B500%3B700%26display%3Dswap"
+        rel="stylesheet">
+    <script src="https://www.google.com/search?q=https://unpkg.com/lucide%40latest"></script>
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #000000;
+            color: #e5e5e5;
+            /* 落ち着いたオフホワイト */
+            letter-spacing: 0.05em;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
 
-    /* 洗練されたボタンホバー */
-    .btn-premium {
-        position: relative;
-        overflow: hidden;
-        z-index: 1;
-    }
-    .btn-premium::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background-color: #ffffff;
-        transition: left 0.5s cubic-bezier(0.25, 1, 0.5, 1);
-        z-index: -1;
-    }
-    .btn-premium:hover::before {
-        left: 0;
-    }
-    .btn-premium:hover {
-        color: #000000;
-    }
-</style>
-</head><body class="selection:bg-white selection:text-black overflow-x-hidden"><!-- Navigation -->
-<nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-gray-900 transition-all duration-300" id="navbar">
-    <div class="max-w-6xl mx-auto px-6">
-        <div class="flex items-center justify-between h-20">
-            <div class="font-bold text-xl tracking-widest en-font text-white">
-                YOYOKA
-            </div>
-            <div>
-                <a href="#ticket" class="text-xs font-medium tracking-widest border border-gray-500 text-gray-300 px-6 py-2 hover:border-white hover:text-white transition-colors duration-300">
-                    TICKET
-                </a>
-            </div>
-        </div>
-    </div>
-</nav>
+        h1,
+        h2,
+        h3,
+        .en-font {
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.15em;
+        }
 
-<!-- Hero Section -->
-<div class="relative pt-20 pb-32 flex content-center items-center justify-center min-h-screen overflow-hidden">
-    <div class="absolute inset-0 w-full h-full">
-        <div class="absolute inset-0 bg-center bg-cover bg-no-repeat hero-bg-zoom" style="background-image: url('image_61ab9a.jpg'); background-position: center 20%;" id="hero-bg">
-            <img src="image_61ab9a.jpg" alt="YOYOKA" style="display: none;" onerror="document.getElementById('hero-bg').style.backgroundImage = `url('https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?q=80&w=2070&auto=format&fit=crop')`;">
-        </div>
-        <!-- グラデーションオーバーレイ（AlphaTheta風の重厚感） -->
-        <span class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/50 to-black"></span>
-    </div>
-    
-    <div class="container relative mx-auto px-6 z-10 mt-20">
-        <div class="max-w-4xl mx-auto text-center">
-            <div class="reveal inline-block border border-gray-400 text-gray-300 px-6 py-2 mb-10 tracking-widest text-xs font-bold bg-black/50 backdrop-blur-sm">
-                緊急帰国
-            </div>
-            <h1 class="reveal reveal-delay-1 font-extrabold text-5xl md:text-8xl leading-tight mb-8 text-white">
-                SECRET SHOW
-            </h1>
-            <p class="reveal reveal-delay-2 text-base md:text-lg text-gray-400 font-light leading-loose mb-12 max-w-2xl mx-auto">
-                ロサンゼルスを拠点に世界へ挑戦する16歳の天才ドラマー、YOYOKA。<br>
-                一時帰国に合わせ、シークレットショーを開催します。<br>
-                彼女の魂の音を、ぜひ身体で体感してください。
-            </p>
-        </div>
-    </div>
-    
-    <!-- Scroll Indicator -->
-    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center reveal reveal-delay-3">
-        <span class="text-[10px] text-gray-500 tracking-widest en-font mb-2">SCROLL</span>
-        <div class="w-[1px] h-12 bg-gray-800 relative overflow-hidden">
-            <div class="absolute top-0 left-0 w-full h-full bg-white animate-[scrollDown_1.5s_ease-in-out_infinite]"></div>
-        </div>
-    </div>
-</div>
-<style>
-    @keyframes scrollDown {
-        0% { transform: translateY(-100%); }
-        100% { transform: translateY(100%); }
-    }
-</style>
+        /* ヒーロー画像のゆっくりズーム (Ken Burns Effect) */
+        .hero-bg-zoom {
+            animation: zoomEffect 20s infinite alternate linear;
+        }
 
-<!-- The Story of YOYOKA -->
-<section class="py-32 bg-[#050505] border-t border-gray-900">
-    <div class="container mx-auto px-6 max-w-5xl">
-        <h2 class="reveal text-2xl md:text-3xl font-bold mb-20 tracking-widest text-center en-font text-white">
-            <span class="text-gray-600 mr-4">01.</span>THE STORY
-        </h2>
-        
-        <div class="flex flex-col md:flex-row gap-16 items-start">
-            <!-- プロフィール写真エリア（独立して配置） -->
-            <div class="w-full md:w-5/12 reveal">
-                <div class="sticky top-32">
-                    <img src="image_61abd8.jpg" alt="YOYOKA Profile" class="w-full h-auto rounded-lg shadow-2xl" onerror="this.src='https://images.unsplash.com/photo-1543621404-5f50de991a0c?q=80&w=2080&auto=format&fit=crop'; this.onerror=null;">
-                    <div class="mt-8 border-l-2 border-gray-800 pl-6">
-                        <h3 class="text-3xl font-bold mb-1 en-font tracking-wider text-white">YOYOKA</h3>
-                        <p class="text-gray-500 text-sm tracking-widest en-font">DRUMMER</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- テキストエリア -->
-            <div class="w-full md:w-7/12 text-gray-300 font-light leading-loose space-y-12">
-                <div class="reveal">
-                    <p class="text-xl font-medium text-white pb-6 border-b border-gray-800 leading-relaxed">
-                        8歳の「天才少女」から、<br>世界で戦う16歳のプロフェッショナルへ。
-                    </p>
-                </div>
-                
-                <div class="reveal">
-                    <p>
-                        8歳の時、Led Zeppelinのカバー動画が世界中で話題となり、彼女のドラムは一躍世界に見つかりました。<br>
-                        その後、Newsweek誌「世界が尊敬する日本人100」に選出され、シンディ・ローパーやRUSHといった世界的レジェンドたちからの指名で共演を果たすなど、その才能はすでに世界基準で評価されています。<br>
-                        より高いレベルでの音楽活動を目指し、2022年に家族とともに活動の拠点をアメリカ・ロサンゼルスへ。
-                    </p>
-                </div>
-                
-                <!-- YouTube Video -->
-                <div class="reveal rounded-lg overflow-hidden border border-gray-800 my-12 shadow-2xl">
-                    <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/91pz1E8pAOY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-                
-                <div class="reveal bg-black p-8 border-l-2 border-white my-8 rounded-r-lg">
-                    <p class="text-sm">
-                        華々しい活躍の一方で、そこには大きな壁があります。<br>
-                        クラシック音楽などとは異なり、ポップス・ロック分野において10代のアーティストが海外挑戦するための公的な支援制度や奨学金は、日本にはほぼ存在しません。<br>
-                        現在の彼女の活動資金は、スポンサーからのご支援と、家族の自己負担という「孤軍奮闘」によって切り拓かれているのが現実です。
-                    </p>
-                </div>
+        @keyframes zoomEffect {
+            0% {
+                transform: scale(1);
+            }
 
-                <div class="reveal">
-                    <p>
-                        昨年は、ICC FUKUOKA 2025に登壇し、自らの演奏とともにその現状を訴えるなど、彼女は今、自らの道を切り拓きながら、後に続く若者たちのための道をも作ろうとしています。
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Message Section -->
-<section id="story" class="py-32 bg-black border-t border-gray-900">
-    <div class="container mx-auto px-6 max-w-3xl">
-        <h2 class="reveal text-2xl md:text-3xl font-bold mb-20 tracking-widest text-center en-font text-white">
-            <span class="text-gray-600 mr-4">02.</span>主催者メッセージ
-        </h2>
-        
-        <div class="text-gray-400 font-light leading-loose space-y-10">
-            <div class="reveal">
-                <p>
-                    今回、一時帰国するYOYOKAちゃんのシークレットショーを、私が主催させていただくことになりました。
-                </p>
-                <p class="mt-6">
-                    理由はとてもシンプルです。<br>
-                    <span class="text-gray-200">「今の彼女のドラムを、どうしても生で観てほしい」</span>と思ったから。
-                </p>
-            </div>
-
-            <div class="reveal">
-                <p>
-                    昨年からご家族と関わらせていただく中で、私はたくさんのことを知りました。<br>
-                    <br>
-                    アメリカへ拠点を移すという決断。<br>
-                    家族総出で挑戦を支える覚悟。<br>
-                    言葉も文化も違う場所で、ゼロから切り拓いていく日々。<br>
-                    <br>
-                    そこには華やかなニュースの裏側にある、現実がありました。
-                </p>
-            </div>
-
-            <div class="reveal">
-                <p>
-                    日本では、10代のポップス・ロック奏者が海外に挑戦するための公的支援は、ほとんどありません。<br>
-                    才能の問題ではなく、「環境」や「制度」の壁が立ちはだかります。<br>
-                    <br>
-                    それでも、彼女たちは立ち止まりませんでした。
-                </p>
-            </div>
-
-            <div class="reveal">
-                <p>
-                    私はその姿に、ただの感動ではなく、<br>
-                    「これは社会全体の問題でもあるのではないか」と感じました。
-                </p>
-            </div>
-
-            <div class="reveal">
-                <p>
-                    自分の人生の主人公は自分。<br>
-                    でも、人は一人では生きていけない。<br>
-                    <br>
-                    誰かが挑戦するとき、<br>
-                    周りがどう関わるかで、未来は変わる。<br>
-                    <br>
-                    私にできることは何か。<br>
-                    その問いの答えとして、今回この場をつくりました。
-                </p>
-            </div>
-
-            <div class="reveal">
-                <p>
-                    このイベントは、ただのライブではありません。<br>
-                    <br>
-                    演奏はもちろん、<br>
-                    いま彼女たちが直面しているリアルな現状、<br>
-                    そしてこれから世界に向けて何を目指しているのかもお話しいただきます。
-                </p>
-            </div>
-
-            <div class="reveal">
-                <p>
-                    難しいことは抜きにして、<br>
-                    まずは「音」を聴きに来てください。<br>
-                    <br>
-                    世界に挑む16歳のドラムは、<br>
-                    きっと、あなたの中の何かを揺らします。
-                </p>
-            </div>
-
-            <div class="reveal">
-                <p>
-                    そしてもし、<br>
-                    「応援したい」と感じていただけたら、<br>
-                    当日、会場でその想いをドネーションという形で届けていただけたら嬉しいです。
-                </p>
-            </div>
-
-            <div class="reveal">
-                <p>
-                    この挑戦は、彼女ひとりのものではなく、<br>
-                    未来をつくる物語だと私は信じています。<br>
-                    <br>
-                    会場でお会いできることを、心から楽しみにしています。
-                </p>
-            </div>
-            
-            <div class="reveal pt-16 border-t border-gray-900 text-right">
-                <p class="text-[10px] text-gray-500 mb-2 tracking-widest en-font">YOYOKA SECRET SHOW ORGANIZER</p>
-                <p class="font-medium text-white tracking-widest text-lg">和田優喜子</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Info & Schedule -->
-<section class="py-32 bg-[#050505] border-t border-gray-900">
-    <div class="container mx-auto px-6 max-w-5xl">
-        <h2 class="reveal text-2xl md:text-3xl font-bold mb-20 tracking-widest text-center en-font text-white">
-            <span class="text-gray-600 mr-4">03.</span>INFORMATION
-        </h2>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
-            <!-- Details -->
-            <div class="reveal">
-                <h3 class="text-xs text-gray-500 tracking-widest mb-10 en-font border-b border-gray-800 pb-4">EVENT DETAILS</h3>
-                <dl class="space-y-8 text-sm font-light">
-                    <div class="flex flex-col">
-                        <dt class="text-[10px] text-gray-500 mb-2 tracking-widest en-font">DATE</dt>
-                        <dd class="text-white text-lg tracking-wider">2026年3月6日 <span class="text-gray-500 text-sm ml-2">(金) 13:00 START</span></dd>
-                    </div>
-                    <div class="flex flex-col">
-                        <dt class="text-[10px] text-gray-500 mb-2 tracking-widest en-font">VENUE</dt>
-                        <dd class="text-white text-lg tracking-wider mb-2">都内ライブハウス</dd>
-                        <dd class="text-gray-500 text-xs leading-relaxed">※完全シークレットのため、会場はお申し込みいただいた方にのみお知らせします。</dd>
-                    </div>
-                </dl>
-            </div>
-
-            <!-- Schedule -->
-            <div class="reveal reveal-delay-1">
-                <h3 class="text-xs text-gray-500 tracking-widest mb-10 en-font border-b border-gray-800 pb-4">SCHEDULE</h3>
-                <div class="space-y-8 text-sm font-light mb-8">
-                    <div class="flex items-start">
-                        <div class="w-20 font-bold text-gray-400 en-font pt-1">12:30</div>
-                        <div class="flex-1 text-gray-200">受付開始</div>
-                    </div>
-                    <div class="flex items-start">
-                        <div class="w-20 font-bold text-gray-400 en-font pt-1">13:00</div>
-                        <div class="flex-1">
-                            <p class="mb-2 text-white font-medium">開演</p>
-                            <p class="text-xs text-gray-500 leading-relaxed">パフォーマンス、プレゼンテーション、トーク</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start">
-                        <div class="w-20 font-bold text-gray-400 en-font pt-1">14:30</div>
-                        <div class="flex-1 text-gray-200">交流・物販</div>
-                    </div>
-                    <div class="flex items-start">
-                        <div class="w-20 font-bold text-gray-400 en-font pt-1">15:30</div>
-                        <div class="flex-1 text-gray-200">終了</div>
-                    </div>
-                </div>
-                <p class="text-[10px] text-gray-600">※スケジュールは進行により変更になる可能性があります</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Message Board Section -->
-<section class="py-32 bg-black border-t border-gray-900 text-center">
-    <div class="container mx-auto px-6 max-w-3xl">
-        <h2 class="reveal text-2xl md:text-3xl font-bold mb-6 tracking-widest en-font text-white">
-            <span class="text-gray-600 mr-4">04.</span>MESSAGE BOARD
-        </h2>
-        <p class="reveal text-sm text-gray-500 mb-16 leading-loose font-light">
-            YOYOKAちゃんへの熱い応援メッセージをお待ちしています。
-        </p>
-        
-        <div class="reveal bg-[#050505] border border-gray-900 p-8 md:p-10 text-left mb-16 relative">
-            <!-- 装飾用の角 -->
-            <div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-gray-600"></div>
-            <div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-gray-600"></div>
-            <div class="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-gray-600"></div>
-            <div class="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-gray-600"></div>
-
-            <div class="space-y-8">
-                <div>
-                    <label for="user-name" class="block text-[10px] font-bold tracking-widest text-gray-500 mb-3 en-font">NAME</label>
-                    <input type="text" id="user-name" class="w-full bg-black border-b border-gray-800 text-white p-3 focus:outline-none focus:border-white transition-colors text-sm font-light" placeholder="お名前（ニックネーム可）">
-                </div>
-                <div>
-                    <div class="flex justify-between items-end mb-3">
-                        <label for="support-input" class="block text-[10px] font-bold tracking-widest text-gray-500 en-font">MESSAGE</label>
-                        <button onclick="addEnglishMessage()" id="en-btn" class="text-[10px] text-gray-400 hover:text-white flex items-center gap-1 transition-colors tracking-widest">
-                            <i data-lucide="languages" class="w-3 h-3"></i> LAに届くよう英語を添える
-                        </button>
-                    </div>
-                    <textarea id="support-input" rows="4" class="w-full bg-black border border-gray-800 text-white p-4 focus:outline-none focus:border-white transition-colors text-sm font-light resize-none" placeholder="YOYOKAちゃんへのメッセージをどうぞ"></textarea>
-                </div>
-                
-                <div class="text-center pt-4">
-                    <button id="post-btn" onclick="postMessage()" class="btn-premium border border-white text-white font-bold tracking-widest py-4 px-16 transition-colors duration-500 text-xs">
-                        投稿する
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Message List -->
-        <div id="message-list" class="space-y-4 text-left">
-            <!-- 投稿がここに追加される -->
-        </div>
-    </div>
-</section>
-
-<!-- Donation & Ticket Section -->
-<section id="ticket" class="py-32 bg-[#050505] border-t border-gray-900 text-center relative overflow-hidden">
-    <!-- 背景の巨大なテキスト装飾 -->
-    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[100px] md:text-[200px] font-black text-white/[0.02] en-font whitespace-nowrap pointer-events-none select-none z-0">
-        DONATION
-    </div>
-
-    <div class="container mx-auto px-6 max-w-3xl relative z-10">
-        <h2 class="reveal text-2xl md:text-3xl font-bold mb-20 tracking-widest en-font text-white">
-            <span class="text-gray-600 mr-4">05.</span>DONATION & TICKET
-        </h2>
-
-        <div class="reveal text-left bg-black p-10 border border-gray-900 mb-16 shadow-2xl">
-            <h4 class="text-sm font-bold tracking-widest mb-6 border-b border-gray-800 pb-4 text-white">ドネーション（支援金）について</h4>
-            <div class="text-sm text-gray-400 font-light leading-loose space-y-6">
-                <p>
-                    今回のイベントは、皆様からのドネーション（ご支援）によって成り立つ特別なシークレットショーです。
-                </p>
-                <p>
-                    本イベントは基本招待制となっております。ご案内時に直接お伝えさせていただいた通り、固定のチケット代金は設定しておりません。<br>
-                    当日のパフォーマンスや彼女たちの挑戦の物語に共感していただけましたら、ドネーションへのご協力をお願いいたします。
-                </p>
-                <p class="text-xs text-gray-500">※ドリンク代につきましては、当日会場にて各自ご注文・お支払いをお願いいたします。</p>
-                <div class="pt-6 border-t border-gray-800">
-                    <p class="text-gray-300 font-medium leading-relaxed">
-                        いただいた支援金は、最低限のイベント運営経費を除き、全額YOYOKAちゃんの今後の活動資金とさせていただきます。
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="reveal">
-            <button class="btn-premium border border-white text-white font-bold tracking-widest py-5 px-20 transition-colors duration-500 text-sm">
-                申し込む
-            </button>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="bg-black py-12 border-t border-gray-900">
-    <div class="container mx-auto px-6 text-center">
-        <p class="text-gray-600 text-[10px] tracking-widest en-font">© 2026 YOYOKA SECRET SHOW</p>
-    </div>
-</footer>
-
-<script>
-    // API Configuration
-    const apiKey = ""; 
-
-    // Exponential Backoff Fetch
-    async function fetchWithBackoff(url, options, retries = 5) {
-        const delays = [1000, 2000, 4000, 8000, 16000];
-        for (let i = 0; i < retries; i++) {
-            try {
-                const response = await fetch(url, options);
-                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-                return await response.json();
-            } catch (e) {
-                if (i === retries - 1) throw e;
-                await new Promise(res => setTimeout(res, delays[i]));
+            100% {
+                transform: scale(1.05);
             }
         }
-    }
 
-    // --- Intersection Observer for Scroll Animation (Reveal) ---
-    document.addEventListener("DOMContentLoaded", () => {
-        const reveals = document.querySelectorAll(".reveal");
-        const revealOptions = {
-            threshold: 0.1, // 10%見えたら発火
-            rootMargin: "0px 0px -50px 0px"
-        };
+        /* スクロール連動フェードアップ (Reveal) */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+        }
 
-        const revealOnScroll = new IntersectionObserver(function(entries, observer) {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) {
-                    return;
-                } else {
-                    entry.target.classList.add("active");
-                    observer.unobserve(entry.target); // 一度発火したら監視をやめる
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 少し遅れて出てくる要素用 */
+        .reveal-delay-1 {
+            transition-delay: 0.1s;
+        }
+
+        .reveal-delay-2 {
+            transition-delay: 0.2s;
+        }
+
+        .reveal-delay-3 {
+            transition-delay: 0.3s;
+        }
+
+        /* 洗練されたボタンホバー */
+        .btn-premium {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            transition: left 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+            z-index: -1;
+        }
+
+        .btn-premium:hover::before {
+            left: 0;
+        }
+
+        .btn-premium:hover {
+            color: #000000;
+        }
+    </style>
+</head>
+
+<body class="selection:bg-white selection:text-black overflow-x-hidden"><!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-gray-900 transition-all duration-300"
+        id="navbar">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+                <div class="font-bold text-xl tracking-widest en-font text-white">
+                    YOYOKA
+                </div>
+                <div>
+                    <a href="#ticket"
+                        class="text-xs font-medium tracking-widest border border-gray-500 text-gray-300 px-6 py-2 hover:border-white hover:text-white transition-colors duration-300">
+                        TICKET
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative pt-20 pb-32 flex content-center items-center justify-center min-h-screen overflow-hidden">
+        <div class="absolute inset-0 w-full h-full">
+            <div class="absolute inset-0 bg-center bg-cover bg-no-repeat hero-bg-zoom"
+                style="background-image: url('image_61ab9a.jpg'); background-position: center 20%;" id="hero-bg">
+                <img src="image_61ab9a.jpg" alt="YOYOKA" style="display: none;"
+                    onerror="document.getElementById('hero-bg').style.backgroundImage = `url('https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?q=80&w=2070&auto=format&fit=crop')`;">
+            </div>
+            <!-- グラデーションオーバーレイ（AlphaTheta風の重厚感） -->
+            <span class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/50 to-black"></span>
+        </div>
+
+        <div class="container relative mx-auto px-6 z-10 mt-20">
+            <div class="max-w-4xl mx-auto text-center">
+                <div
+                    class="reveal inline-block border border-gray-400 text-gray-300 px-6 py-2 mb-10 tracking-widest text-xs font-bold bg-black/50 backdrop-blur-sm">
+                    緊急帰国
+                </div>
+                <h1 class="reveal reveal-delay-1 font-extrabold text-5xl md:text-8xl leading-tight mb-8 text-white">
+                    SECRET SHOW
+                </h1>
+                <p
+                    class="reveal reveal-delay-2 text-base md:text-lg text-gray-400 font-light leading-loose mb-12 max-w-2xl mx-auto">
+                    ロサンゼルスを拠点に世界へ挑戦する16歳の天才ドラマー、YOYOKA。<br>
+                    一時帰国に合わせ、シークレットショーを開催します。<br>
+                    彼女の魂の音を、ぜひ身体で体感してください。
+                </p>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div
+            class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center reveal reveal-delay-3">
+            <span class="text-[10px] text-gray-500 tracking-widest en-font mb-2">SCROLL</span>
+            <div class="w-[1px] h-12 bg-gray-800 relative overflow-hidden">
+                <div
+                    class="absolute top-0 left-0 w-full h-full bg-white animate-[scrollDown_1.5s_ease-in-out_infinite]">
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        @keyframes scrollDown {
+            0% {
+                transform: translateY(-100%);
+            }
+
+            100% {
+                transform: translateY(100%);
+            }
+        }
+    </style>
+
+    <!-- The Story of YOYOKA -->
+    <section class="py-32 bg-[#050505] border-t border-gray-900">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <h2 class="reveal text-2xl md:text-3xl font-bold mb-20 tracking-widest text-center en-font text-white">
+                <span class="text-gray-600 mr-4">01.</span>THE STORY
+            </h2>
+
+            <div class="flex flex-col md:flex-row gap-16 items-start">
+                <!-- プロフィール写真エリア（独立して配置） -->
+                <div class="w-full md:w-5/12 reveal">
+                    <div class="sticky top-32">
+                        <img src="image_yoyoka_01.jpeg" alt="YOYOKA Profile" class="w-full h-auto rounded-lg shadow-2xl"
+                            onerror="this.src='https://images.unsplash.com/photo-1543621404-5f50de991a0c?q=80&w=2080&auto=format&fit=crop'; this.onerror=null;">
+                        <div class="mt-8 border-l-2 border-gray-800 pl-6">
+                            <h3 class="text-3xl font-bold mb-1 en-font tracking-wider text-white">YOYOKA</h3>
+                            <p class="text-gray-500 text-sm tracking-widest en-font">DRUMMER</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- テキストエリア -->
+                <div class="w-full md:w-7/12 text-gray-300 font-light leading-loose space-y-12">
+                    <div class="reveal">
+                        <p class="text-xl font-medium text-white pb-6 border-b border-gray-800 leading-relaxed">
+                            8歳の「天才少女」から、<br>世界で戦う16歳のプロフェッショナルへ。
+                        </p>
+                    </div>
+
+                    <div class="reveal">
+                        <p>
+                            8歳の時、Led Zeppelinのカバー動画が世界中で話題となり、彼女のドラムは一躍世界に見つかりました。<br>
+                            その後、Newsweek誌「世界が尊敬する日本人100」に選出され、シンディ・ローパーやRUSHといった世界的レジェンドたちからの指名で共演を果たすなど、その才能はすでに世界基準で評価されています。<br>
+                            より高いレベルでの音楽活動を目指し、2022年に家族とともに活動の拠点をアメリカ・ロサンゼルスへ。
+                        </p>
+                    </div>
+
+                    <!-- YouTube Video -->
+                    <div class="reveal rounded-lg overflow-hidden border border-gray-800 my-12 shadow-2xl">
+                        <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/91pz1E8pAOY"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+
+                    <div class="reveal bg-black p-8 border-l-2 border-white my-8 rounded-r-lg">
+                        <p class="text-sm">
+                            華々しい活躍の一方で、そこには大きな壁があります。<br>
+                            クラシック音楽などとは異なり、ポップス・ロック分野において10代のアーティストが海外挑戦するための公的な支援制度や奨学金は、日本にはほぼ存在しません。<br>
+                            現在の彼女の活動資金は、スポンサーからのご支援と、家族の自己負担という「孤軍奮闘」によって切り拓かれているのが現実です。
+                        </p>
+                    </div>
+
+                    <div class="reveal">
+                        <p>
+                            昨年は、ICC FUKUOKA 2025に登壇し、自らの演奏とともにその現状を訴えるなど、彼女は今、自らの道を切り拓きながら、後に続く若者たちのための道をも作ろうとしています。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Message Section -->
+    <section id="story" class="py-32 bg-black border-t border-gray-900">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="reveal text-2xl md:text-3xl font-bold mb-20 tracking-widest text-center en-font text-white">
+                <span class="text-gray-600 mr-4">02.</span>主催者メッセージ
+            </h2>
+
+            <div class="text-gray-400 font-light leading-loose space-y-10">
+                <div class="reveal">
+                    <p>
+                        今回、一時帰国するYOYOKAちゃんのシークレットショーを、私が主催させていただくことになりました。
+                    </p>
+                    <p class="mt-6">
+                        理由はとてもシンプルです。<br>
+                        <span class="text-gray-200">「今の彼女のドラムを、どうしても生で観てほしい」</span>と思ったから。
+                    </p>
+                </div>
+
+                <div class="reveal">
+                    <p>
+                        昨年からご家族と関わらせていただく中で、私はたくさんのことを知りました。<br>
+                        <br>
+                        アメリカへ拠点を移すという決断。<br>
+                        家族総出で挑戦を支える覚悟。<br>
+                        言葉も文化も違う場所で、ゼロから切り拓いていく日々。<br>
+                        <br>
+                        そこには華やかなニュースの裏側にある、現実がありました。
+                    </p>
+                </div>
+
+                <div class="reveal">
+                    <p>
+                        日本では、10代のポップス・ロック奏者が海外に挑戦するための公的支援は、ほとんどありません。<br>
+                        才能の問題ではなく、「環境」や「制度」の壁が立ちはだかります。<br>
+                        <br>
+                        それでも、彼女たちは立ち止まりませんでした。
+                    </p>
+                </div>
+
+                <div class="reveal">
+                    <p>
+                        私はその姿に、ただの感動ではなく、<br>
+                        「これは社会全体の問題でもあるのではないか」と感じました。
+                    </p>
+                </div>
+
+                <div class="reveal">
+                    <p>
+                        自分の人生の主人公は自分。<br>
+                        でも、人は一人では生きていけない。<br>
+                        <br>
+                        誰かが挑戦するとき、<br>
+                        周りがどう関わるかで、未来は変わる。<br>
+                        <br>
+                        私にできることは何か。<br>
+                        その問いの答えとして、今回この場をつくりました。
+                    </p>
+                </div>
+
+                <div class="reveal">
+                    <p>
+                        このイベントは、ただのライブではありません。<br>
+                        <br>
+                        演奏はもちろん、<br>
+                        いま彼女たちが直面しているリアルな現状、<br>
+                        そしてこれから世界に向けて何を目指しているのかもお話しいただきます。
+                    </p>
+                </div>
+
+                <div class="reveal">
+                    <p>
+                        難しいことは抜きにして、<br>
+                        まずは「音」を聴きに来てください。<br>
+                        <br>
+                        世界に挑む16歳のドラムは、<br>
+                        きっと、あなたの中の何かを揺らします。
+                    </p>
+                </div>
+
+                <div class="reveal">
+                    <p>
+                        そしてもし、<br>
+                        「応援したい」と感じていただけたら、<br>
+                        当日、会場でその想いをドネーションという形で届けていただけたら嬉しいです。
+                    </p>
+                </div>
+
+                <div class="reveal">
+                    <p>
+                        この挑戦は、彼女ひとりのものではなく、<br>
+                        未来をつくる物語だと私は信じています。<br>
+                        <br>
+                        会場でお会いできることを、心から楽しみにしています。
+                    </p>
+                </div>
+
+                <div class="reveal pt-16 border-t border-gray-900 text-right">
+                    <p class="text-[10px] text-gray-500 mb-2 tracking-widest en-font">YOYOKA SECRET SHOW ORGANIZER</p>
+                    <p class="font-medium text-white tracking-widest text-lg">和田優喜子</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info & Schedule -->
+    <section class="py-32 bg-[#050505] border-t border-gray-900">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <h2 class="reveal text-2xl md:text-3xl font-bold mb-20 tracking-widest text-center en-font text-white">
+                <span class="text-gray-600 mr-4">03.</span>INFORMATION
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
+                <!-- Details -->
+                <div class="reveal">
+                    <h3 class="text-xs text-gray-500 tracking-widest mb-10 en-font border-b border-gray-800 pb-4">EVENT
+                        DETAILS</h3>
+                    <dl class="space-y-8 text-sm font-light">
+                        <div class="flex flex-col">
+                            <dt class="text-[10px] text-gray-500 mb-2 tracking-widest en-font">DATE</dt>
+                            <dd class="text-white text-lg tracking-wider">2026年3月6日 <span
+                                    class="text-gray-500 text-sm ml-2">(金) 13:00 START</span></dd>
+                        </div>
+                        <div class="flex flex-col">
+                            <dt class="text-[10px] text-gray-500 mb-2 tracking-widest en-font">VENUE</dt>
+                            <dd class="text-white text-lg tracking-wider mb-2">都内ライブハウス</dd>
+                            <dd class="text-gray-500 text-xs leading-relaxed">※完全シークレットのため、会場はお申し込みいただいた方にのみお知らせします。
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <!-- Schedule -->
+                <div class="reveal reveal-delay-1">
+                    <h3 class="text-xs text-gray-500 tracking-widest mb-10 en-font border-b border-gray-800 pb-4">
+                        SCHEDULE</h3>
+                    <div class="space-y-8 text-sm font-light mb-8">
+                        <div class="flex items-start">
+                            <div class="w-20 font-bold text-gray-400 en-font pt-1">12:30</div>
+                            <div class="flex-1 text-gray-200">受付開始</div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-20 font-bold text-gray-400 en-font pt-1">13:00</div>
+                            <div class="flex-1">
+                                <p class="mb-2 text-white font-medium">開演</p>
+                                <p class="text-xs text-gray-500 leading-relaxed">パフォーマンス、プレゼンテーション、トーク</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-20 font-bold text-gray-400 en-font pt-1">14:30</div>
+                            <div class="flex-1 text-gray-200">交流・物販</div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-20 font-bold text-gray-400 en-font pt-1">15:30</div>
+                            <div class="flex-1 text-gray-200">終了</div>
+                        </div>
+                    </div>
+                    <p class="text-[10px] text-gray-600">※スケジュールは進行により変更になる可能性があります</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-24 bg-[#0a0a0a] border-t border-gray-900 overflow-hidden">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="reveal rounded-xl overflow-hidden shadow-2xl">
+                <img src="image_yoyoka_02.jpg" alt="YOYOKA Performance"
+                    class="w-full h-auto object-cover hover:scale-105 transition-transform duration-1000">
+            </div>
+        </div>
+    </section>
+
+    <!-- Message Board Section -->
+    <section class="py-32 bg-black border-t border-gray-900 text-center">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="reveal text-2xl md:text-3xl font-bold mb-6 tracking-widest en-font text-white">
+                <span class="text-gray-600 mr-4">04.</span>MESSAGE BOARD
+            </h2>
+            <p class="reveal text-sm text-gray-500 mb-16 leading-loose font-light">
+                YOYOKAちゃんへの熱い応援メッセージをお待ちしています。
+            </p>
+
+            <div class="reveal bg-[#050505] border border-gray-900 p-8 md:p-10 text-left mb-16 relative">
+                <!-- 装飾用の角 -->
+                <div class="absolute top-0 left-0 w-2 h-2 border-t border-l border-gray-600"></div>
+                <div class="absolute top-0 right-0 w-2 h-2 border-t border-r border-gray-600"></div>
+                <div class="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-gray-600"></div>
+                <div class="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-gray-600"></div>
+
+                <div class="space-y-8">
+                    <div>
+                        <label for="user-name"
+                            class="block text-[10px] font-bold tracking-widest text-gray-500 mb-3 en-font">NAME</label>
+                        <input type="text" id="user-name"
+                            class="w-full bg-black border-b border-gray-800 text-white p-3 focus:outline-none focus:border-white transition-colors text-sm font-light"
+                            placeholder="お名前（ニックネーム可）">
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-end mb-3">
+                            <label for="support-input"
+                                class="block text-[10px] font-bold tracking-widest text-gray-500 en-font">MESSAGE</label>
+                            <button onclick="addEnglishMessage()" id="en-btn"
+                                class="text-[10px] text-gray-400 hover:text-white flex items-center gap-1 transition-colors tracking-widest">
+                                <i data-lucide="languages" class="w-3 h-3"></i> LAに届くよう英語を添える
+                            </button>
+                        </div>
+                        <textarea id="support-input" rows="4"
+                            class="w-full bg-black border border-gray-800 text-white p-4 focus:outline-none focus:border-white transition-colors text-sm font-light resize-none"
+                            placeholder="YOYOKAちゃんへのメッセージをどうぞ"></textarea>
+                    </div>
+
+                    <div class="text-center pt-4">
+                        <button id="post-btn" onclick="postMessage()"
+                            class="btn-premium border border-white text-white font-bold tracking-widest py-4 px-16 transition-colors duration-500 text-xs">
+                            投稿する
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Message List -->
+            <div id="message-list" class="space-y-4 text-left">
+                <!-- 投稿がここに追加される -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation & Ticket Section -->
+    <section id="ticket" class="py-32 bg-[#050505] border-t border-gray-900 text-center relative overflow-hidden">
+        <!-- 背景の巨大なテキスト装飾 -->
+        <div
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[100px] md:text-[200px] font-black text-white/[0.02] en-font whitespace-nowrap pointer-events-none select-none z-0">
+            DONATION
+        </div>
+
+        <div class="container mx-auto px-6 max-w-3xl relative z-10">
+            <h2 class="reveal text-2xl md:text-3xl font-bold mb-20 tracking-widest en-font text-white">
+                <span class="text-gray-600 mr-4">05.</span>DONATION & TICKET
+            </h2>
+
+            <div class="reveal text-left bg-black p-10 border border-gray-900 mb-16 shadow-2xl">
+                <h4 class="text-sm font-bold tracking-widest mb-6 border-b border-gray-800 pb-4 text-white">
+                    ドネーション（支援金）について</h4>
+                <div class="text-sm text-gray-400 font-light leading-loose space-y-6">
+                    <p>
+                        今回のイベントは、皆様からのドネーション（ご支援）によって成り立つ特別なシークレットショーです。
+                    </p>
+                    <p>
+                        本イベントは基本招待制となっております。ご案内時に直接お伝えさせていただいた通り、固定のチケット代金は設定しておりません。<br>
+                        当日のパフォーマンスや彼女たちの挑戦の物語に共感していただけましたら、ドネーションへのご協力をお願いいたします。
+                    </p>
+                    <p class="text-xs text-gray-500">※ドリンク代につきましては、当日会場にて各自ご注文・お支払いをお願いいたします。</p>
+                    <div class="pt-6 border-t border-gray-800">
+                        <p class="text-gray-300 font-medium leading-relaxed">
+                            いただいた支援金は、最低限のイベント運営経費を除き、全額YOYOKAちゃんの今後の活動資金とさせていただきます。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal">
+                <button
+                    class="btn-premium border border-white text-white font-bold tracking-widest py-5 px-20 transition-colors duration-500 text-sm">
+                    申し込む
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-gray-900">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-600 text-[10px] tracking-widest en-font">© 2026 YOYOKA SECRET SHOW</p>
+        </div>
+    </footer>
+
+    <script>
+        // API Configuration
+        const apiKey = "";
+
+        // Exponential Backoff Fetch
+        async function fetchWithBackoff(url, options, retries = 5) {
+            const delays = [1000, 2000, 4000, 8000, 16000];
+            for (let i = 0; i < retries; i++) {
+                try {
+                    const response = await fetch(url, options);
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    return await response.json();
+                } catch (e) {
+                    if (i === retries - 1) throw e;
+                    await new Promise(res => setTimeout(res, delays[i]));
                 }
+            }
+        }
+
+        // --- Intersection Observer for Scroll Animation (Reveal) ---
+        document.addEventListener("DOMContentLoaded", () => {
+            const reveals = document.querySelectorAll(".reveal");
+            const revealOptions = {
+                threshold: 0.1, // 10%見えたら発火
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const revealOnScroll = new IntersectionObserver(function (entries, observer) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        return;
+                    } else {
+                        entry.target.classList.add("active");
+                        observer.unobserve(entry.target); // 一度発火したら監視をやめる
+                    }
+                });
+            }, revealOptions);
+
+            reveals.forEach(reveal => {
+                revealOnScroll.observe(reveal);
             });
-        }, revealOptions);
-
-        reveals.forEach(reveal => {
-            revealOnScroll.observe(reveal);
         });
-    });
 
-    // --- Message Board Logic ---
-    let messages = [];
+        // --- Message Board Logic ---
+        let messages = [];
 
-    function renderMessages() {
-        const list = document.getElementById('message-list');
-        list.innerHTML = '';
-        
-        messages.forEach((msg, index) => {
-            const msgEl = document.createElement('div');
-            msgEl.className = 'bg-black border-b border-gray-900 p-6 relative group transition-colors hover:bg-[#050505]';
+        function renderMessages() {
+            const list = document.getElementById('message-list');
+            list.innerHTML = '';
 
-            msgEl.innerHTML = `
+            messages.forEach((msg, index) => {
+                const msgEl = document.createElement('div');
+                msgEl.className = 'bg-black border-b border-gray-900 p-6 relative group transition-colors hover:bg-[#050505]';
+
+                msgEl.innerHTML = `
                 <div class="flex justify-between items-start mb-4">
                     <p class="font-medium text-white text-sm">${msg.name} <span class="text-gray-600 text-[10px] ml-3 en-font">${msg.date}</span></p>
                     <button onclick="deleteMessage(${index})" class="text-gray-700 hover:text-white transition-colors opacity-0 group-hover:opacity-100" title="削除">
@@ -475,93 +572,95 @@
                 </div>
                 <p class="text-sm text-gray-400 font-light leading-relaxed whitespace-pre-wrap">${msg.text}</p>
             `;
-            list.appendChild(msgEl);
-        });
-        lucide.createIcons();
-    }
-
-    function postMessage() {
-        const nameInput = document.getElementById('user-name').value.trim() || '名無しさん';
-        const textInput = document.getElementById('support-input').value.trim();
-        if(!textInput) return;
-
-        const btn = document.getElementById('post-btn');
-        btn.disabled = true;
-
-        const now = new Date();
-        const dateStr = \`\${now.getFullYear()}.\${(now.getMonth()+1).toString().padStart(2, '0')}.\${now.getDate().toString().padStart(2, '0')} \${now.getHours().toString().padStart(2, '0')}:\${now.getMinutes().toString().padStart(2, '0')}\`;
-
-        messages.unshift({
-            name: nameInput,
-            text: textInput,
-            date: dateStr
-        });
-        
-        document.getElementById('support-input').value = '';
-        renderMessages();
-        btn.disabled = false;
-    }
-
-    async function addEnglishMessage() {
-        const textInput = document.getElementById('support-input').value.trim();
-        const inputArea = document.getElementById('support-input');
-        
-        if(!textInput) {
-            inputArea.placeholder = "まずはここに日本語でメッセージを入力してください";
-            inputArea.focus();
-            return;
-        }
-
-        const btn = document.getElementById('en-btn');
-        const originalHtml = btn.innerHTML;
-        btn.disabled = true;
-        btn.innerHTML = '<i data-lucide="loader-2" class="w-3 h-3 animate-spin"></i> 翻訳中...';
-        lucide.createIcons();
-
-        try {
-            const prompt = \`あなたはプロの翻訳家です。以下の日本語の応援メッセージを、ロサンゼルスで活動する16歳のドラマー「YOYOKA」に向けた、自然で熱い英語の応援メッセージに翻訳してください。出力は英語のメッセージのみにしてください。\\n\\n\${textInput}\`;
-
-            const url = \`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=\${apiKey}\`;
-            const options = {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    contents: [{ parts: [{ text: prompt }] }]
-                })
-            };
-
-            const data = await fetchWithBackoff(url, options);
-            const englishText = data.candidates?.[0]?.content?.parts?.[0]?.text;
-            
-            if (englishText) {
-                inputArea.value = textInput + "\\n\\n" + englishText.trim();
-            }
-        } catch(error) {
-            console.error("翻訳エラー:", error);
-            inputArea.placeholder = "翻訳エラーが発生しました。";
-        } finally {
-            btn.disabled = false;
-            btn.innerHTML = originalHtml;
+                list.appendChild(msgEl);
+            });
             lucide.createIcons();
         }
-    }
 
-    function deleteMessage(index) {
-        if(confirm('このメッセージを削除しますか？')) {
-            messages.splice(index, 1);
+        function postMessage() {
+            const nameInput = document.getElementById('user-name').value.trim() || '名無しさん';
+            const textInput = document.getElementById('support-input').value.trim();
+            if (!textInput) return;
+
+            const btn = document.getElementById('post-btn');
+            btn.disabled = true;
+
+            const now = new Date();
+            const dateStr = `${now.getFullYear()}.${(now.getMonth() + 1).toString().padStart(2, '0')}.${now.getDate().toString().padStart(2, '0')} ${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`;
+
+            messages.unshift({
+                name: nameInput,
+                text: textInput,
+                date: dateStr
+            });
+
+            document.getElementById('support-input').value = '';
             renderMessages();
+            btn.disabled = false;
         }
-    }
 
-    // Initialize UI
-    lucide.createIcons();
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
+        async function addEnglishMessage() {
+            const textInput = document.getElementById('support-input').value.trim();
+            const inputArea = document.getElementById('support-input');
+
+            if (!textInput) {
+                inputArea.placeholder = "まずはここに日本語でメッセージを入力してください";
+                inputArea.focus();
+                return;
+            }
+
+            const btn = document.getElementById('en-btn');
+            const originalHtml = btn.innerHTML;
+            btn.disabled = true;
+            btn.innerHTML = '<i data-lucide="loader-2" class="w-3 h-3 animate-spin"></i> 翻訳中...';
+            lucide.createIcons();
+
+            try {
+                const prompt = `あなたはプロの翻訳家です。以下の日本語の応援メッセージを、ロサンゼルスで活動する16歳のドラマー「YOYOKA」に向けた、自然で熱い英語の応援メッセージに翻訳してください。出力は英語のメッセージのみにしてください。\n\n${textInput}`;
+
+                const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+                const options = {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        contents: [{ parts: [{ text: prompt }] }]
+                    })
+                };
+
+                const data = await fetchWithBackoff(url, options);
+                const englishText = data.candidates?.[0]?.content?.parts?.[0]?.text;
+
+                if (englishText) {
+                    inputArea.value = textInput + "\\n\\n" + englishText.trim();
+                }
+            } catch (error) {
+                console.error("翻訳エラー:", error);
+                inputArea.placeholder = "翻訳エラーが発生しました。";
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = originalHtml;
+                lucide.createIcons();
+            }
+        }
+
+        function deleteMessage(index) {
+            if (confirm('このメッセージを削除しますか？')) {
+                messages.splice(index, 1);
+                renderMessages();
+            }
+        }
+
+        // Initialize UI
+        lucide.createIcons();
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
-    });
-</script>
-</body></html>
+    </script>
+</body>
+
+</html>

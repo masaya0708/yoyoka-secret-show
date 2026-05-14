@@ -155,8 +155,8 @@
 
     .hero h1 {
       margin: 0;
-      max-width: 760px;
-      font-size: clamp(48px, 10vw, 128px);
+      max-width: 620px;
+      font-size: clamp(48px, 8.4vw, 108px);
       line-height: .88;
       letter-spacing: .03em;
       font-weight: 950;
@@ -415,6 +415,7 @@
       border: 1px solid rgba(255,255,255,.14);
       padding: 10px;
       width: min(760px, 100%);
+      margin-inline: auto;
     }
 
     .youtube-frame::before {
@@ -881,16 +882,17 @@
 
       .hero {
         min-height: auto;
-        padding-top: 86px;
+        padding: 86px 0 44px;
         background:
-          linear-gradient(180deg, rgba(3,29,22,.82) 0%, rgba(3,29,22,.58) 45%, rgba(3,29,22,.92) 100%),
-          url("assets/yoyoka.jpg") center top / cover no-repeat;
+          linear-gradient(180deg, rgba(3,29,22,.32) 0%, rgba(3,29,22,.22) 42%, rgba(3,29,22,.94) 63%, rgba(3,29,22,.98) 100%),
+          url("assets/yoyoka.jpg") 50% 0 / auto 58vh no-repeat,
+          #031d16;
       }
 
       .hero-grid {
         min-height: auto;
         grid-template-columns: 1fr;
-        padding-top: 44vh;
+        padding-top: 52vh;
       }
 
       .date-panel {
